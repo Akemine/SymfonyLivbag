@@ -1,0 +1,2 @@
+d94a0e,::1,GET,http://localhost:8080/Symfony/web/app_dev.php/_fragment?_path=_format%3Dhtml%26_locale%3Den%26_controller%3DOCPlatformBundle%253AAdvert%253Amenu,1551277098,5d57c6,200
+5d57c6,::1,GET,http://localhost:8080/Symfony/web/app_dev.php/platform/advert/4,1551277098,,200
