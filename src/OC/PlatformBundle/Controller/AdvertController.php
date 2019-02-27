@@ -14,7 +14,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class AdvertController extends Controller
 {
-<<<<<<< HEAD
         public function indexAction($page){
             $listAdverts = array(
                 array(
@@ -56,18 +55,6 @@ class AdvertController extends Controller
         return $this->render('OCPlatformBundle:Advert:view.html.twig', array(
             'advert' => $advert
         ));
-=======
-    public function indexAction($page){
-        if($page < 1){
-            throw new NotFoundHttpException('Page "'.$page.'" inexistante');
-        }
-
-        return $this->render('OCPlatformBundle:Advert:index.html.twig');
-    }
-
-    public function viewAction($id){
-        return $this->render('OCPlatformBundle:Advert:view.html.twig', array('id' => $id));
->>>>>>> 9b995f417533e57db7e9ac037b9e17f48568fb50
     }
 
     public function addAction(Request $request){
@@ -79,7 +66,6 @@ class AdvertController extends Controller
         return $this->render('OCPlatformBundle:Advert:add.html.twig', array('nom' => 'Boudindon'));
     }
 
-<<<<<<< HEAD
     public function editAction($id, Request $request)
     {
         $advert = array(
@@ -92,22 +78,11 @@ class AdvertController extends Controller
         return $this->render('OCPlatformBundle:Advert:edit.html.twig', array(
             'advert' => $advert
         ));
-=======
-    public function editAction($id, Request $request) {
-        if($request->isMethod('POST')){
-            $request->getSession()->getFlashBag()->add('notice', 'Annonce bien modifiée');
-
-
-            return $this->redirectToRoute('oc_platform_view', array('id' => 5));
-        }
-        return $this->render('OCPlatformBundle:Advert:edit.html.twig');
->>>>>>> 9b995f417533e57db7e9ac037b9e17f48568fb50
     }
 
     public function deleteAction(){
         return $this->render('OCPlatformBundle:Advert:delete.html.twig');
     }
-<<<<<<< HEAD
 
     public function menuAction($limit)
     {
@@ -120,6 +95,4 @@ class AdvertController extends Controller
             'listAdverts' => $listAdverts
         ));
     }
-=======
->>>>>>> 9b995f417533e57db7e9ac037b9e17f48568fb50
 }
